@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs') %>
+
+    <!-- <div class="input-group mb-3">
+        <input type="text" class="form-control" name="searchInput">
+        <div class="input-group-append">    
+            <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </div>
+    </div> -->
+
+    <div id="new-menu">
+        <form action="/new" method="POST">
+            <p><input type="text" name="tipsName" placeholder="Enter Name"></p>
+            <p><input type="text" name="tipsLocation" placeholder="Enter Location"></p>
+            <p><button type="submit">Save</button></p>
+        </form>
+    </div>
+    
+        <!-- <% data.forEach( item => { %>
+            <p><%= item.name %></p>
+        <% }) %> -->
+
+    <div class="d-flex flex-row justify-content-between mb-3">
+        <div class="d-flex flex-column p-3">
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div class="menu-code pt-4 pl-4">
+            <p>Lorem</p>
+        </div>
+    </div>
+
+<%- include('../partials/footer.ejs') %>
+   

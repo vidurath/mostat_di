@@ -1,0 +1,45 @@
+<%- include('../partials/header.ejs') %>
+
+    <div class="d-flex flex-row justify-content-between mb-3">
+        <div class="d-flex flex-column p-3">
+            <form class="row g-3" action="/new_tip" method="POST">
+                <!-- <div class="col-md-8">
+                    <label class="form-label">Country</label>
+                    <select id="ddlCountry" name="ddlCountry" class="form-select">
+                      <option selected>Choose...</option>
+                      <option value="272">Bundesliga</option>
+                      <option value="466">La Liga</option>
+                      <option value="263">Ligue 1</option>
+                      <option value="234">Premier League</option>
+                      <option value="318">Serie A</option>
+                    </select>
+                </div> -->
+                <div class="col-md-8">
+                    <label class="form-label">Fixture</label>
+                    <select id="ddlfixture" name="ddlfixture" class="form-select">
+                      <option selected>Choose...</option>
+                      <% data.forEach( item => { %>
+                      <option value="<%= item.id %>"><%= item.homeName %> vs <%= item.awayName %></option>
+                      <% }) %>
+                    </select>
+                </div>
+                <div class="col-md-8">
+                    <label class="form-label">Outcome</label>
+                    <select id="ddloutcome" name="ddloutcome" class="form-select">
+                      <option selected>Choose...</option>
+                      <option value="Home Win FT">Home Win FT</option>
+                      <option value="Away Win FT">Away Win FT</option>
+                      <option value="Draw FT">Draw FT</option>
+                    </select>
+                </div>
+                
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">save</button>
+                </div>
+              </form>
+        </div>
+    </div>
+
+
+<%- include('../partials/footer.ejs') %>
+   
