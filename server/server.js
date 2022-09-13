@@ -3,6 +3,8 @@ const app = express();
 const path = require('path')
 const bodyparser = require('body-parser')
 const tipsRouter = require('./routes/tips')
+const dotenv = require("dotenv")
+dotenv.config()
 
 // set templating Engine
 app.set('view engine', 'ejs')
